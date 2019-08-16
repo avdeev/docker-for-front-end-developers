@@ -84,16 +84,84 @@
         <img class="cover w" src="pictures/docker-boat.jpg" alt="">
     </section>
 
+    <section class="slide clear" style="background-color: #254356;">
+        <img class="cover" src="pictures/VM@2x.png" alt="">
+    </section>
+
+    <section class="slide clear" style="background-color: #254356;">
+        <img class="cover" src="pictures/Container@2x.png" alt="">
+    </section>
+
     <section class="slide">
-        <h2>Hello World</h2>
+        <h2 class="shout" style="font-size: 4.6em;">Установка Docker</h2>
+    </section>
+
+    <section class="slide clear" style="background-color: #061f2f;">
+        <img class="cover w" src="pictures/requirements.png" alt="">
+    </section>
+
+    <section class="slide clear">
+        <img class="cover w" src="pictures/docker-app-drag.png" alt="">
+    </section>
+
+    <section class="slide">
+        <h2>♻ Установка Docker через Homebrew</h2>
 
         <pre>
-            <code class="next">$ docker run ubuntu:14.04 /bin/echo 'Hello world'</code>
+            <code>$ brew cask install <mark>docker</mark></code>
         </pre>
     </section>
 
     <section class="slide">
+        <h2>Что входит</h2>
+
+        <ul>
+            <li class="next">Docker Engine</li>
+            <li class="next">Docker CLI client</li>
+            <li class="next">Docker Compose</li>
+            <li class="next">Docker Machine</li>
+            <li class="next">Kitematic</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>🖼 Некоторые образы (1)</h2>
+
+        <ul>
+            <li class="next">wordpress</li>
+            <li class="next">mysql</li>
+            <li class="next">mysql</li>
+            <li class="next">ubuntu</li>
+            <li class="next">node</li>
+            <li class="next">nginx</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>🖼 Некоторые образы (2)</h2>
+
+        <ul>
+            <li class="next">sentry</li>
+            <li class="next">sonarqube</li>
+            <li class="next">hello-world</li>
+            <li class="next">docker</li>
+            <li class="next">kitematic/minecraft</li>
+            <li class="next">ваш собственный образ</li>
+        </ul>
+    </section>
+
+    <section class="slide">
         <h2>Hello World</h2>
+
+        <pre>
+            <code>$ docker run ubuntu:14.04 /bin/echo 'Hello world'</code>
+            <code> </code>
+            <code>Hello world</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h2>Hello World (2)</h2>
 
         <pre>
             <code>$ <mark>docker run hello-world</mark></code>
@@ -107,29 +175,11 @@
         </pre>
     </section>
 
+    <section class="slide clear">
+        <img class="cover" src="pictures/kitematic.png" alt="">
+    </section>
+
     <!-- кейсы использования докера во фронтенде -->
-
-    <section class="slide">
-        <h2 class="shout" style="font-size: 4.6em;">Технологическая разнородность</h2>
-    </section>
-
-    <section class="slide clear">
-        <img class="cover w" src="pictures/frameworks.png" alt="">
-    </section>
-
-    <section class="slide clear">
-        <img class="cover" style="height: 90%;" src="pictures/backend-frameworks.png" alt="">
-    </section>
-
-    <section class="slide">
-        <h2 class="shout" style="font-size: 4.6em;">Устойчивость</h2>
-    </section>
-
-    <section class="slide">
-        <h2 class="shout" style="font-size: 4.6em;">Масштабирование</h2>
-    </section>
-
-
 
     <section class="slide">
         <h2 class="shout" style="font-size: 4.6em;">Простота развертывания</h2>
@@ -157,6 +207,44 @@
     </section>
 
     <section class="slide">
+        <h2 class="shout" style="font-size: 4.6em;">Технологическая разнородность</h2>
+    </section>
+
+    <section class="slide clear">
+        <img class="cover w" src="pictures/frameworks.png" alt="">
+    </section>
+
+    <section class="slide clear">
+        <img class="cover" style="height: 90%;" src="pictures/backend-frameworks.png" alt="">
+    </section>
+
+    <section class="slide">
+        <h2 class="shout" style="font-size: 4.6em;">Устойчивость</h2>
+    </section>
+
+    <section class="slide">
+        <h2>👍 С Docker</h2>
+
+        <pre>
+            <code>$ docker rm -v redis</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout" style="font-size: 4.6em;">Масштабирование</h2>
+    </section>
+
+    <section class="slide">
+        <h2>👍 С Docker</h2>
+
+        <pre>
+            <code>$ docker service scale frontend=50</code>
+            <code> </code>
+            <code>frontend scaled to 50</code>
+        </pre>
+    </section>
+
+    <section class="slide">
         <h2 class="shout" style="font-size: 4.6em;">Решение организационных вопросов</h2>
     </section>
 
@@ -167,12 +255,6 @@
     <section class="slide">
         <h2 class="shout" style="font-size: 4.6em;">Не только для<br>админов</h2>
     </section>
-
-    <section class="slide clear">
-        <img class="cover" src="pictures/Docker-on-physical.svg" alt="">
-    </section>
-
-
 
     <section class="slide">
         <h2 class="shout" style="font-size: 4.6em;">¯\_(ツ)_/¯<br>Это работает<br>на моей машине</h2>
