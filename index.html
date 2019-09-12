@@ -92,6 +92,145 @@
         <img class="cover w" src="pictures/docker-boat.jpg" alt="">
     </section>
 
+    <section class="slide clear" style="background-color: #50c6c8;">
+        <img class="cover h" src="pictures/beginner.jpg" alt="">
+    </section>
+
+    <section class="slide">
+        <h2 class="shout" style="font-size: 4.6em;">Docker - это для<br>админов</h2>
+    </section>
+
+    <section class="slide">
+        <h2>Что-то для админов</h2>
+
+        <ul style="font-size: 1.3em;">
+            <li class="next">DockerHub</li>
+            <li class="next">Image</li>
+            <li class="next">Dockerfile</li>
+            <li class="next">Network</li>
+            <li class="next">Volume</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout" style="font-size: 4.6em;">Docker как NPM,<br>но для Ops</h2>
+    </section>
+
+    <section class="slide">
+        <h2>Знакомые понятия</h2>
+
+        <ul style="font-size: 1.3em;">
+            <li class="next"><s>DockerHub</s> <b class="next">NPM Registry</b></li>
+            <li class="next"><s>Image</s> <b class="next">Package</b></li>
+            <li class="next"><s>Dockerfile</s> <b class="next">package.json</b></li>
+            <li class="next"><s>Network</s> <b class="next">npm link</b></li>
+            <li class="next"><s>Volume</s> <b class="next">node_modules</b></li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Знакомые понятия</h2>
+
+        <ul style="font-size: 1.3em;">
+            <li class="next">Проект начат как проприетарная разработка</li>
+            <li class="next">Используется для всего подряд</li>
+            <li class="next">Есть альтернативы, призванные заменить</li>
+        </ul>
+    </section>
+
+    <!-- кейсы использования докера во фронтенде -->
+
+    <section class="slide">
+        <h2 class="shout" style="font-size: 4.6em;">Простота развертывания</h2>
+    </section>
+
+    <section class="slide">
+        <h2>😫 Без Docker</h2>
+
+        <pre>
+            <code class="next">$ sudo apt update</code>
+            <code class="next">$ sudo apt install mysql-server</code>
+            <code class="next">...</code>
+            <code class="next">$ \curl -sSL https://get.rvm.io | bash</code>
+            <code class="next">...</code>
+            <code class="next">$ rails s</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h2>👍 С Docker</h2>
+
+        <pre>
+            <code>$ docker-compose up api</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout" style="font-size: 4.6em;">Технологическая разнородность</h2>
+    </section>
+
+    <section class="slide clear">
+        <img class="cover w" src="pictures/frameworks.png" alt="">
+    </section>
+
+    <section class="slide clear">
+        <img class="cover" style="height: 90%;" src="pictures/backend-frameworks.png" alt="">
+    </section>
+
+    <section class="slide">
+        <h2 class="shout" style="font-size: 4.6em;">Устойчивость</h2>
+    </section>
+
+    <section class="slide">
+        <h2>👍 С Docker</h2>
+
+        <pre>
+            <code>$ docker rm -v redis</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout" style="font-size: 4.6em;">Масштабирование</h2>
+    </section>
+
+    <section class="slide">
+        <h2>👍 С Docker</h2>
+
+        <pre>
+            <code>$ docker service scale frontend=50</code>
+            <code> </code>
+            <code>frontend scaled to 50</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout" style="font-size: 4.6em;">Решение организационных вопросов</h2>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout" style="font-size: 4.6em;">Закон Конвея</h2>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout" style="font-size: 4.6em;">Компонуемость</h2>
+    </section>
+
+<!--     <section class="slide">
+        <h2 class="shout" style="font-size: 4.6em;">¯\_(ツ)_/¯<br>Это работает<br>на моей машине</h2>
+    </section> -->
+
+    <section class="slide clear">
+        <img class="cover h" src="pictures/Geek-T-Shirt.jpg_q50.webp" alt="">
+    </section>
+
+    <section class="slide">
+        <h2 class="shout" style="font-size: 4.6em;">Требования: Docker</h2>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout" style="font-size: 4.6em;">Пишите код для продакшена</h2>
+    </section>
+
     <section class="slide clear" style="background-color: #254356;">
         <img class="cover" src="pictures/VM@2x.png" alt="">
     </section>
@@ -185,95 +324,6 @@
 
     <section class="slide clear">
         <img class="cover" src="pictures/kitematic.png" alt="">
-    </section>
-
-    <!-- кейсы использования докера во фронтенде -->
-
-    <section class="slide">
-        <h2 class="shout" style="font-size: 4.6em;">Простота развертывания</h2>
-    </section>
-
-    <section class="slide">
-        <h2>😫 Без Docker</h2>
-
-        <pre>
-            <code class="next">$ sudo apt update</code>
-            <code class="next">$ sudo apt install mysql-server</code>
-            <code class="next">...</code>
-            <code class="next">$ \curl -sSL https://get.rvm.io | bash</code>
-            <code class="next">...</code>
-            <code class="next">$ rails s</code>
-        </pre>
-    </section>
-
-    <section class="slide">
-        <h2>👍 С Docker</h2>
-
-        <pre>
-            <code>$ docker-compose up api</code>
-        </pre>
-    </section>
-
-    <section class="slide">
-        <h2 class="shout" style="font-size: 4.6em;">Технологическая разнородность</h2>
-    </section>
-
-    <section class="slide clear">
-        <img class="cover w" src="pictures/frameworks.png" alt="">
-    </section>
-
-    <section class="slide clear">
-        <img class="cover" style="height: 90%;" src="pictures/backend-frameworks.png" alt="">
-    </section>
-
-    <section class="slide">
-        <h2 class="shout" style="font-size: 4.6em;">Устойчивость</h2>
-    </section>
-
-    <section class="slide">
-        <h2>👍 С Docker</h2>
-
-        <pre>
-            <code>$ docker rm -v redis</code>
-        </pre>
-    </section>
-
-    <section class="slide">
-        <h2 class="shout" style="font-size: 4.6em;">Масштабирование</h2>
-    </section>
-
-    <section class="slide">
-        <h2>👍 С Docker</h2>
-
-        <pre>
-            <code>$ docker service scale frontend=50</code>
-            <code> </code>
-            <code>frontend scaled to 50</code>
-        </pre>
-    </section>
-
-    <section class="slide">
-        <h2 class="shout" style="font-size: 4.6em;">Решение организационных вопросов</h2>
-    </section>
-
-    <section class="slide">
-        <h2 class="shout" style="font-size: 4.6em;">Компонуемость</h2>
-    </section>
-
-    <section class="slide">
-        <h2 class="shout" style="font-size: 4.6em;">Не только для<br>админов</h2>
-    </section>
-
-    <section class="slide">
-        <h2 class="shout" style="font-size: 4.6em;">¯\_(ツ)_/¯<br>Это работает<br>на моей машине</h2>
-    </section>
-
-    <section class="slide">
-        <h2 class="shout" style="font-size: 4.6em;">Требования: Docker</h2>
-    </section>
-
-    <section class="slide">
-        <h2 class="shout" style="font-size: 4.6em;">Пишите код для продакшена</h2>
     </section>
 
     <!-- конкретно наш случай, как мы работаем с докером -->
