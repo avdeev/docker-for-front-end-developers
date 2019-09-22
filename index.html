@@ -141,7 +141,8 @@
     <!-- кейсы использования докера во фронтенде -->
 
     <section class="slide">
-        <h2 class="shout" style="font-size: 4.6em;">Простота развертывания</h2>
+        <h2 class="shout" style="font-size: 4.6em;">Поднимаем новый проект</h2>
+        <!-- <h2 class="shout" style="font-size: 4.6em;">Простота развертывания</h2> -->
     </section>
 
     <section class="slide">
@@ -166,7 +167,8 @@
     </section>
 
     <section class="slide">
-        <h2 class="shout" style="font-size: 4.6em;">Технологическая разнородность</h2>
+        <h2 class="shout" style="font-size: 4.6em;">Выбираем<br>технологию</h2>
+        <!-- <h2 class="shout" style="font-size: 4.6em;">Технологическая разнородность</h2> -->
     </section>
 
     <section class="slide clear">
@@ -174,23 +176,27 @@
     </section>
 
     <section class="slide clear">
-        <img class="cover" style="height: 90%;" src="pictures/backend-frameworks.png" alt="">
+        <img class="cover h" style="height: 90%;" src="pictures/backend-frameworks.png" alt="">
     </section>
 
     <section class="slide">
         <h2 class="shout" style="font-size: 4.6em;">Устойчивость</h2>
     </section>
 
+    <section class="slide clear">
+        <img class="cover h" style="height: 100%;" src="pictures/winXPwin7_1527919170.jpg" alt="">
+    </section>
+
     <section class="slide">
         <h2>👍 С Docker</h2>
 
         <pre>
-            <code>$ docker rm -v redis</code>
+            <code>$ docker rm -v api</code>
         </pre>
     </section>
 
     <section class="slide">
-        <h2 class="shout" style="font-size: 4.6em;">Масштабирование</h2>
+        <h2 class="shout" style="font-size: 4.6em;">Нагрузка</h2>
     </section>
 
     <section class="slide">
@@ -213,6 +219,24 @@
 
     <section class="slide">
         <h2 class="shout" style="font-size: 4.6em;">Компонуемость</h2>
+    </section>
+
+    <section class="slide">
+        <h2>👍 С Docker</h2>
+
+        <pre style="font-size: 0.65em;">
+            <code>services:</code>
+            <code>  <mark>cashbox-api</mark>:</code>
+            <code>    build: ./api</code>
+            <code>  <mark>cashbox-admin-front</mark>:</code>
+            <code>    build: ./admin-front</code>
+            <code>  <mark>nginx</mark>:</code>
+            <code>    image: nginx:1-alpine</code>
+            <code>    volumes:</code>
+            <code>     - ./data/nginx:/etc/nginx/conf.d</code>
+            <code>    ports:</code>
+            <code>    - 80:80</code>
+        </pre>
     </section>
 
 <!--     <section class="slide">
@@ -276,7 +300,6 @@
 
         <ul>
             <li class="next">wordpress</li>
-            <li class="next">mysql</li>
             <li class="next">mysql</li>
             <li class="next">ubuntu</li>
             <li class="next">node</li>
