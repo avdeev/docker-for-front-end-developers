@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="node_modules/@shower/ribbon/styles/styles.css">
+    <link rel="stylesheet" type="text/css" href="/asciinema-player.css" />
     <style>
         .shower {
             --slide-ratio: calc(16 / 9);
@@ -58,6 +59,10 @@
             #cover p a {
                 color: #000;
             }
+
+            .asciinema-terminal .line {
+                overflow: visible;
+            }
         </style>
     </section>
 
@@ -86,6 +91,15 @@
 
     <section class="slide">
         <h2 class="shout" style="font-size: 3.6em;">Безопасно собирайте, делитесь и запускайте любое приложение где-угодно</h2>
+    </section>
+
+    <section class="slide clear">
+        <asciinema-player
+            font-size="big"
+            src="asciinema/151078.json"
+            cols="90"
+            rows="15"
+        ></asciinema-player>
     </section>
 
     <section class="slide clear">
@@ -372,5 +386,6 @@
     <script src="node_modules/shower-core/shower.min.js"></script>
     <!-- Copyright © 3000 Yours Truly, Famous Inc. -->
 
+    <script src="/asciinema-player.js"></script>
 </body>
 </html>
