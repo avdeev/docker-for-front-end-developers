@@ -184,6 +184,10 @@
     </section>
 
     <section class="slide">
+        <img class="cover w" src="pictures/dockerhub-node.png" alt="" style="box-shadow: 5px 5px 20px 8px #b9b9b9;; width: 90%;">
+    </section>
+
+    <section class="slide">
         <h2>Dockerfile для Node.js</h2>
 
         <pre>
@@ -193,8 +197,12 @@
             <code class="next">RUN npm ci</code>
             <code class="next">COPY . .</code>
             <code class="next"><mark>EXPOSE 5000</mark></code>
-            <code class="next">CMD node server.js</code>
+            <code class="next">CMD ["node", "server.js"]</code>
         </pre>
+    </section>
+
+    <section class="slide">
+        <img class="cover w" src="pictures/dockerhub-python.png" alt="" style="box-shadow: 5px 5px 20px 8px #b9b9b9;; width: 90%;">
     </section>
 
     <section class="slide">
@@ -206,7 +214,8 @@
             <code class="next">COPY requirements.txt ./</code>
             <code class="next">RUN pip install --no-cache-dir -r requirements.txt</code>
             <code class="next">COPY . .</code>
-            <code class="next">CMD [ "python", "./your-daemon-or-script.py" ]</code>
+            <code class="next"><mark>EXPOSE 5000</mark></code>
+            <code class="next">CMD ["python", "./your-daemon-or-script.py"]</code>
         </pre>
     </section>
 
