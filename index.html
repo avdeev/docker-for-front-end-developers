@@ -30,6 +30,10 @@
             color: initial;
             background: none;
         }
+
+        .asciinema-terminal .line span {
+            height: auto;
+        }
     </style>
 </head>
 <body class="shower list">
@@ -58,10 +62,6 @@
             }
             #cover p a {
                 color: #000;
-            }
-
-            .asciinema-terminal .line {
-                overflow: visible;
             }
         </style>
     </section>
@@ -93,13 +93,23 @@
         <h2 class="shout" style="font-size: 3.6em;">Безопасно собирайте, делитесь и запускайте любое приложение где-угодно</h2>
     </section>
 
+    <section class="slide">
+        <img class="cover w" src="pictures/dockerhub-wordpress.png" alt="" style="box-shadow: 5px 5px 20px 8px #b9b9b9;; width: 90%;">
+    </section>
+
     <section class="slide clear">
         <asciinema-player
+            autoplay
+            preload
             font-size="big"
-            src="asciinema/151078.json"
+            src="asciinema/272875.cast"
             cols="90"
-            rows="15"
+            rows="14"
         ></asciinema-player>
+    </section>
+
+    <section class="slide clear">
+        <img class="cover w" src="pictures/wordpress-1.png" alt="" style="width: 90%;">
     </section>
 
     <section class="slide clear">
