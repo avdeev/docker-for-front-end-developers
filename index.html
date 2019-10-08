@@ -75,7 +75,7 @@
     </section>
 
     <section class="slide">
-        <h2 class="shout" style="font-size: 4.6em;">Эра Docker</h2>
+        <h2 class="shout">Эра Docker</h2>
     </section>
 
     <section class="slide">
@@ -94,6 +94,10 @@
         <img class="cover h" src="pictures/what-are-you.jpg" alt="">
     </section>
 
+    <section class="slide">
+        <h2 class="shout" style="font-size: 3.6em;">Безопасно собирайте, делитесь и запускайте любое приложение где-угодно</h2>
+    </section>
+
     <section class="slide clear" style="background-color: #254356;">
         <img class="cover" src="pictures/VM@2x.png" alt="">
     </section>
@@ -103,7 +107,43 @@
     </section>
 
     <section class="slide">
-        <h2 class="shout" style="font-size: 4.6em;">Поднимаем новый проект</h2>
+        <h2 class="shout">Установка Docker</h2>
+    </section>
+
+    <section class="slide clear" style="background-color: #061f2f;">
+        <img class="cover w" src="pictures/requirements.png" alt="">
+    </section>
+
+    <section class="slide clear">
+        <img class="cover w" src="pictures/docker-app-drag.png" alt="">
+    </section>
+
+    <section class="slide">
+        <h2>♻ Установка Docker через Homebrew</h2>
+
+        <pre>
+            <code>$ brew cask install <mark>docker</mark></code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h2>Что входит в Docker Desktop</h2>
+
+        <ul>
+            <li class="next">Docker Engine</li>
+            <li class="next">Docker CLI client</li>
+            <li class="next">Docker Compose</li>
+            <li class="next">Docker Machine</li>
+            <li class="next">Kitematic</li>
+        </ul>
+    </section>
+
+    <section class="slide clear">
+        <img class="cover" src="pictures/kitematic.png" alt="">
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">Поднимаем новый проект</h2>
     </section>
 
     <section class="slide">
@@ -123,7 +163,9 @@
         <h2>👍 С Docker</h2>
 
         <pre>
-            <code>$ docker-compose up api</code>
+            <code class="next">$ docker-compose up api</code>
+            <code class="next">...</code>
+            <code class="next">Listening localhost:8080</code>
         </pre>
     </section>
 
@@ -138,11 +180,15 @@
     </section>
 
     <section class="slide">
-        <h2 class="shout" style="font-size: 4.6em;">Выбираем<br>технологию</h2>
+        <h2 class="shout">Выбираем<br>технологию</h2>
     </section>
 
     <section class="slide clear">
         <img class="cover w" src="pictures/frameworks.png" alt="">
+    </section>
+
+    <section class="slide">
+        <img class="cover w" src="pictures/dockerhub-node.png" alt="" style="box-shadow: 5px 5px 20px 8px #b9b9b9;; width: 90%;">
     </section>
 
     <section class="slide">
@@ -160,6 +206,10 @@
     </section>
 
     <section class="slide">
+        <img class="cover w" src="pictures/dockerhub-nginx.png" alt="" style="box-shadow: 5px 5px 20px 8px #b9b9b9;; width: 90%;">
+    </section>
+
+    <section class="slide">
         <h2>Dockerfile (2)</h2>
 
         <pre>
@@ -174,8 +224,8 @@
         <h2>Запускаем контейнер</h2>
 
         <pre>
-            <code>docker build -t my-app .</code>
-            <code class="next">docker run -p 5000:5000 -t my-app</code>
+            <code>docker build <mark>-t my-app</mark> .</code>
+            <code class="next">docker run -p 5000:5000 <mark>-t my-app</mark></code>
         </pre>
     </section>
 
@@ -220,7 +270,11 @@
     </section>
 
     <section class="slide">
-        <h2 class="shout" style="font-size: 4.6em;">Устойчивость</h2>
+        <h2 class="shout">Универсальная абстракция</h2>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">Устойчивость</h2>
     </section>
 
     <section class="slide clear">
@@ -231,12 +285,12 @@
         <h2>👍 С Docker</h2>
 
         <pre>
-            <code>$ docker rm -v api</code>
+            <code>$ docker rm --volumes api</code>
         </pre>
     </section>
 
     <section class="slide">
-        <h2 class="shout" style="font-size: 4.6em;">Нагрузка</h2>
+        <h2 class="shout">Нагрузка</h2>
     </section>
 
     <section class="slide">
@@ -250,15 +304,15 @@
     </section>
 
     <section class="slide">
-        <h2 class="shout" style="font-size: 4.6em;">Решение организационных вопросов</h2>
+        <h2 class="shout">Решение организационных вопросов</h2>
     </section>
 
     <section class="slide">
-        <h2 class="shout" style="font-size: 4.6em;">Закон Конвея</h2>
+        <h2 class="shout">Закон Конвея</h2>
     </section>
 
     <section class="slide">
-        <h2 class="shout" style="font-size: 4.6em;">Компонуемость</h2>
+        <h2 class="shout">Компонуемость</h2>
     </section>
 
     <section class="slide">
@@ -292,7 +346,7 @@
     </section>
 
     <section class="slide">
-        <h2 class="shout" style="font-size: 3.6em;">Безопасно собирайте, делитесь и запускайте любое приложение где-угодно</h2>
+        <h2 class="shout">Wordpress за&nbsp;5&nbsp;минут</h2>
     </section>
 
     <section class="slide">
@@ -369,7 +423,7 @@
     </section>
 
     <section class="slide">
-        <h2 class="shout" style="font-size: 4.6em;">Docker - это для<br>админов</h2>
+        <h2 class="shout">Docker - это для<br>админов</h2>
     </section>
 
     <section class="slide">
@@ -385,7 +439,7 @@
     </section>
 
     <section class="slide">
-        <h2 class="shout" style="font-size: 4.6em;">Docker как NPM,<br>но для Ops</h2>
+        <h2 class="shout">Docker как NPM,<br>но для Ops</h2>
     </section>
 
     <section class="slide">
@@ -413,43 +467,7 @@
     <!-- кейсы использования докера во фронтенде -->
 
     <section class="slide">
-        <h2 class="shout" style="font-size: 4.6em;">Требования: Docker</h2>
-    </section>
-
-    <section class="slide">
-        <h2 class="shout" style="font-size: 4.6em;">Пишите код для продакшена</h2>
-    </section>
-
-    <section class="slide">
-        <h2 class="shout" style="font-size: 4.6em;">Установка Docker</h2>
-    </section>
-
-    <section class="slide clear" style="background-color: #061f2f;">
-        <img class="cover w" src="pictures/requirements.png" alt="">
-    </section>
-
-    <section class="slide clear">
-        <img class="cover w" src="pictures/docker-app-drag.png" alt="">
-    </section>
-
-    <section class="slide">
-        <h2>♻ Установка Docker через Homebrew</h2>
-
-        <pre>
-            <code>$ brew cask install <mark>docker</mark></code>
-        </pre>
-    </section>
-
-    <section class="slide">
-        <h2>Что входит</h2>
-
-        <ul>
-            <li class="next">Docker Engine</li>
-            <li class="next">Docker CLI client</li>
-            <li class="next">Docker Compose</li>
-            <li class="next">Docker Machine</li>
-            <li class="next">Kitematic</li>
-        </ul>
+        <h2 class="shout">Требования: Docker</h2>
     </section>
 
     <section class="slide">
@@ -478,6 +496,10 @@
     </section>
 
     <section class="slide">
+        <h2 class="shout">Docker для разработки</h2>
+    </section>
+
+    <section class="slide">
         <h2>Hello World</h2>
 
         <pre>
@@ -502,8 +524,8 @@
         </pre>
     </section>
 
-    <section class="slide clear">
-        <img class="cover" src="pictures/kitematic.png" alt="">
+    <section class="slide">
+        <h2 class="shout">Пишите код для продакшена</h2>
     </section>
 
     <!-- конкретно наш случай, как мы работаем с докером -->
