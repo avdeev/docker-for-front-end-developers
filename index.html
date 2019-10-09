@@ -75,6 +75,10 @@
     </section>
 
     <section class="slide">
+        <img class="cover w" src="pictures/intro.png" alt="" style="width: 90%;">
+    </section>
+
+    <section class="slide">
         <h2 class="shout">Эра Docker</h2>
     </section>
 
@@ -90,12 +94,118 @@
         </ol>
     </section>
 
+    <section class="slide">
+        <h2 class="shout">Зачем?</h2>
+    </section>
+
+    <section class="slide clear" style="background-color: #ea413c">
+        <img class="cover h" src="pictures/iamdone.png" alt="" style="height: 100%;">
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">Поднимаем backend</h2>
+    </section>
+
+    <section class="slide">
+        <h2>😫 Без Docker</h2>
+
+        <pre>
+            <code class="next">$ sudo apt update</code>
+            <code class="next">$ sudo apt install mysql-server</code>
+            <code class="next">...</code>
+            <code class="next">$ \curl -sSL https://get.rvm.io | bash</code>
+            <code class="next">...</code>
+            <code class="next">$ rails s</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h2>👍 С Docker</h2>
+
+        <pre>
+            <code class="next">$ docker-compose up api</code>
+            <code class="next">...</code>
+            <code class="next">Listening localhost:8080</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">Устанавливаем<br>БД</h2>
+    </section>
+
+    <section class="slide">
+        <h2>😫 Без Docker</h2>
+
+        <pre>
+            <code class="next">$ sudo apt update</code>
+            <code class="next">$ sudo apt install mysql-server</code>
+            <code class="next">$ sudo mysql_secure_installation</code>
+            <code class="next">$ sudo mysql</code>
+            <code class="next">...</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h2>👍 С Docker</h2>
+
+        <pre>
+            <code class="next">$ docker run </code>
+            <code class="next">  --name some-mysql</code>
+            <code class="next">  --env MYSQL_ROOT_PASSWORD=my-secret-pw</code>
+            <code class="next">  --detach</code>
+            <code class="next">  mysql:8</code>
+            <code class="next"> </code>
+            <code class="next">86f3fabdfb64e70e09ffe9d0b7dfce7827e40...</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">Запускаем Lighthouse</h2>
+    </section>
+
+    <section class="slide">
+        <h2>😫 Без Docker</h2>
+
+        <pre>
+            <code class="next">Установить Google Chrome for Desktop.</code>
+            <code class="next">Установить текущую LTS версию Node.</code>
+            <code class="next">$ npm install -g lighthouse</code>
+            <code class="next">$ lighthouse http://frontendconf.ru</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h2>👍 С Docker</h2>
+
+        <pre>
+            <code class="next">$ docker run </code>
+            <code class="next">  --rm</code>
+            <code class="next">  --name lighthouse</code>
+            <code class="next">  -it</code>
+            <code class="next">  --volume ~:/home/chrome/reports</code>
+            <code class="next">  --cap-add=SYS_ADMIN</code>
+            <code class="next">  femtopixel/google-lighthouse http://frontendconf.ru</code>
+        </pre>
+    </section>
+
+    <section class="slide clear">
+        <asciinema-player
+            preload
+            font-size="big"
+            src="asciinema/lighthouse.cast"
+            cols="90"
+            rows="14"
+        ></asciinema-player>
+    </section>
+
     <section class="slide clear">
         <img class="cover h" src="pictures/what-are-you.jpg" alt="">
     </section>
 
     <section class="slide">
-        <h2 class="shout" style="font-size: 3.6em;">Безопасно собирайте, делитесь и запускайте любое приложение где-угодно</h2>
+        <h2 class="shout" style="font-size: 3.6em;">
+            Безопасно собирайте, делитесь и запускайте любое приложение где-угодно
+        </h2>
     </section>
 
     <section class="slide clear" style="background-color: #254356;">
@@ -140,33 +250,6 @@
 
     <section class="slide clear">
         <img class="cover" src="pictures/kitematic.png" alt="">
-    </section>
-
-    <section class="slide">
-        <h2 class="shout">Поднимаем новый проект</h2>
-    </section>
-
-    <section class="slide">
-        <h2>😫 Без Docker</h2>
-
-        <pre>
-            <code class="next">$ sudo apt update</code>
-            <code class="next">$ sudo apt install mysql-server</code>
-            <code class="next">...</code>
-            <code class="next">$ \curl -sSL https://get.rvm.io | bash</code>
-            <code class="next">...</code>
-            <code class="next">$ rails s</code>
-        </pre>
-    </section>
-
-    <section class="slide">
-        <h2>👍 С Docker</h2>
-
-        <pre>
-            <code class="next">$ docker-compose up api</code>
-            <code class="next">...</code>
-            <code class="next">Listening localhost:8080</code>
-        </pre>
     </section>
 
     <section class="slide clear">
@@ -271,22 +354,6 @@
 
     <section class="slide">
         <h2 class="shout">Универсальная абстракция</h2>
-    </section>
-
-    <section class="slide">
-        <h2 class="shout">Устойчивость</h2>
-    </section>
-
-    <section class="slide clear">
-        <img class="cover h" style="height: 100%;" src="pictures/winXPwin7_1527919170.jpg" alt="">
-    </section>
-
-    <section class="slide">
-        <h2>👍 С Docker</h2>
-
-        <pre>
-            <code>$ docker rm --volumes api</code>
-        </pre>
     </section>
 
     <section class="slide">
@@ -465,10 +532,6 @@
     </section>
 
     <!-- кейсы использования докера во фронтенде -->
-
-    <section class="slide">
-        <h2 class="shout">Требования: Docker</h2>
-    </section>
 
     <section class="slide">
         <h2>🖼 Некоторые образы (1)</h2>
