@@ -363,15 +363,76 @@
     </section>
 
     <section class="slide">
-        <img class="cover w" src="pictures/dockerhub-minecraft.png" alt="" style="box-shadow: 5px 5px 20px 8px #b9b9b9; width: 90%;">
-    </section>
-
-    <section class="slide">
         <img class="cover w" src="pictures/dockerhub-sonarqube.png" alt="" style="box-shadow: 5px 5px 20px 8px #b9b9b9; width: 90%;">
     </section>
 
     <section class="slide">
+        <img class="cover w" src="pictures/dockerhub-minecraft.png" alt="" style="box-shadow: 5px 5px 20px 8px #b9b9b9; width: 90%;">
+    </section>
+
+    <section class="slide">
         <img class="cover w" src="pictures/dockerhub-docker.png" alt="" style="box-shadow: 5px 5px 20px 8px #b9b9b9; width: 90%;">
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">Запускаем Lighthouse</h2>
+    </section>
+
+    <section class="slide">
+        <h2>😫 Без Docker</h2>
+
+        <pre>
+            <code class="next">Установить Google Chrome for Desktop.</code>
+            <code class="next">Установить текущую LTS версию Node.</code>
+            <code class="next">$ npm install -g lighthouse</code>
+            <code class="next">$ lighthouse http://frontendconf.ru</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <img class="cover w" src="pictures/dockerhub-google-lighthouse.png" alt="" style="box-shadow: 5px 5px 20px 8px #b9b9b9; width: 90%;">
+    </section>
+
+    <section class="slide">
+        <h2>👍 С Docker</h2>
+
+        <pre>
+            <code>$ docker run \</code>
+            <code>  --rm \</code>
+            <code>  --name lighthouse \</code>
+            <code>  -it \</code>
+            <code>  --volume ~:/home/chrome/reports \</code>
+            <code>  --cap-add=SYS_ADMIN \</code>
+            <code>  <mark>femtopixel/google-lighthouse http://frontendconf.ru</mark></code>
+        </pre>
+    </section>
+
+    <section class="slide clear">
+        <asciinema-player
+            preload
+            font-size="big"
+            src="asciinema/lighthouse.cast"
+            cols="90"
+            rows="14"
+        ></asciinema-player>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">Нагрузка</h2>
+    </section>
+
+    <section class="slide">
+        <h2>👍 С Docker</h2>
+
+        <pre>
+            <code>$ docker service scale frontend=50</code>
+            <code> </code>
+            <code>frontend scaled to 50</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">Решение организационных вопросов</h2>
     </section>
 
     <section class="slide">
@@ -469,85 +530,6 @@
     </section>
 
     <section class="slide">
-        <h2 class="shout">Запускаем Lighthouse</h2>
-    </section>
-
-    <section class="slide">
-        <h2>😫 Без Docker</h2>
-
-        <pre>
-            <code class="next">Установить Google Chrome for Desktop.</code>
-            <code class="next">Установить текущую LTS версию Node.</code>
-            <code class="next">$ npm install -g lighthouse</code>
-            <code class="next">$ lighthouse http://frontendconf.ru</code>
-        </pre>
-    </section>
-
-    <section class="slide">
-        <h2>👍 С Docker</h2>
-
-        <pre>
-            <code class="next">$ docker run </code>
-            <code class="next">  --rm</code>
-            <code class="next">  --name lighthouse</code>
-            <code class="next">  -it</code>
-            <code class="next">  --volume ~:/home/chrome/reports</code>
-            <code class="next">  --cap-add=SYS_ADMIN</code>
-            <code class="next">  femtopixel/google-lighthouse http://frontendconf.ru</code>
-        </pre>
-    </section>
-
-    <section class="slide clear">
-        <asciinema-player
-            preload
-            font-size="big"
-            src="asciinema/lighthouse.cast"
-            cols="90"
-            rows="14"
-        ></asciinema-player>
-    </section>
-
-    <section class="slide">
-        <h2 class="shout">Нагрузка</h2>
-    </section>
-
-    <section class="slide">
-        <h2>👍 С Docker</h2>
-
-        <pre>
-            <code>$ docker service scale frontend=50</code>
-            <code> </code>
-            <code>frontend scaled to 50</code>
-        </pre>
-    </section>
-
-    <section class="slide">
-        <h2 class="shout">Решение организационных вопросов</h2>
-    </section>
-
-    <section class="slide">
-        <h2 class="shout">Компонуемость</h2>
-    </section>
-
-    <section class="slide">
-        <h2>👍 С Docker</h2>
-
-        <pre style="font-size: 0.65em;">
-            <code>services:</code>
-            <code>  <mark>cashbox-api</mark>:</code>
-            <code>    build: ./api</code>
-            <code>  <mark>cashbox-admin-front</mark>:</code>
-            <code>    build: ./admin-front</code>
-            <code>  <mark>nginx</mark>:</code>
-            <code>    image: nginx:1-alpine</code>
-            <code>    volumes:</code>
-            <code>     - ./data/nginx:/etc/nginx/conf.d</code>
-            <code>    ports:</code>
-            <code>    - 80:80</code>
-        </pre>
-    </section>
-
-    <section class="slide">
         <h2 class="shout">Wordpress за&nbsp;5&nbsp;минут</h2>
     </section>
 
@@ -618,6 +600,28 @@
 
     <section class="slide clear" style="background-color: #ebedef;">
         <img class="cover h" src="pictures/wordpress-files.png" alt="" style="height: 90%;">
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">Компонуемость</h2>
+    </section>
+
+    <section class="slide">
+        <h2>👍 С Docker</h2>
+
+        <pre style="font-size: 0.65em;">
+            <code>services:</code>
+            <code>  <mark>cashbox-api</mark>:</code>
+            <code>    build: ./api</code>
+            <code>  <mark>cashbox-admin-front</mark>:</code>
+            <code>    build: ./admin-front</code>
+            <code>  <mark>nginx</mark>:</code>
+            <code>    image: nginx:1-alpine</code>
+            <code>    volumes:</code>
+            <code>     - ./data/nginx:/etc/nginx/conf.d</code>
+            <code>    ports:</code>
+            <code>    - 80:80</code>
+        </pre>
     </section>
 
     <!-- конкретно наш случай, как мы работаем с докером -->
