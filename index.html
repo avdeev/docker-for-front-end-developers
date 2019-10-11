@@ -66,6 +66,8 @@
         </style>
     </section>
 
+    <!-- докер приходит во фронтенд -->
+
     <section class="slide">
         <img class="cover w" src="pictures/trends.png" alt="" style="box-shadow: 5px 5px 20px 8px #b9b9b9;; width: 80%;">
     </section>
@@ -98,6 +100,9 @@
         </ol>
     </section>
 
+    <!-- зачем фронту докер -->
+    <!-- 1. поднимает локально backend -->
+
     <section class="slide">
         <h2 class="shout">Зачем?</h2>
     </section>
@@ -107,30 +112,35 @@
     </section>
 
     <section class="slide clear" style="background-color: #ea413c">
-        <img class="cover h" src="pictures/iamdone.png" alt="" style="height: 100%;">
+        <img class="cover h" src="pictures/iamdone.png" alt="">
     </section>
 
-    <section class="slide">
-        <h2>😫 Без Docker</h2>
+    <section class="slide clear">
+        <img class="cover h" src="pictures/life-stack.png" alt="" style="height: 80%;">
+    </section>
 
-        <pre>
-            <code class="next">$ sudo apt update</code>
-            <code class="next">$ sudo apt install mysql-server</code>
-            <code class="next">...</code>
-            <code class="next">$ \curl -sSL https://get.rvm.io | bash</code>
-            <code class="next">...</code>
-            <code class="next">$ rails s</code>
-        </pre>
+    <section class="slide clear">
+        <img class="cover w" src="pictures/start-life.png" alt="">
+    </section>
+
+    <section class="slide clear">
+        <img class="cover w" src="pictures/life-services.png" alt="">
     </section>
 
     <section class="slide">
         <h2>👍 С Docker</h2>
 
         <pre>
-            <code class="next">$ docker-compose up api</code>
-            <code class="next">...</code>
-            <code class="next">Listening localhost:8080</code>
+            <code>$ docker-compose up api</code>
+            <code>...</code>
+            <code>Listening localhost:8080</code>
         </pre>
+    </section>
+
+    <section class="slide">
+        <h2>👍 С Docker</h2>
+
+        <img class="cover w" src="pictures/compose.png" alt="" style="width: 90%;">
     </section>
 
     <section class="slide clear">
@@ -143,77 +153,54 @@
         ></asciinema-player>
     </section>
 
+    <section class="slide">
+        <h2 class="shout">Автоматизируй всё</h2>
+    </section>
+
+    <!-- 2. оставляем рабочий компьютер чистым -->
+
+    <section class="slide">
+        <h2 class="shout">Устойчивость</h2>
+    </section>
+
     <section class="slide clear">
+        <img class="cover h" style="height: 100%;" src="pictures/winXPwin7_1527919170.jpg" alt="">
+    </section>
+
+    <section class="slide">
+        <h2>👍 С Docker</h2>
+
+        <pre>
+            <code>$ docker rm --volumes api</code>
+        </pre>
+    </section>
+
+    <!-- 3.  -->
+
+    <section class="slide">
+        <h2 class="shout">Учимся деплоить</h2>
+    </section>
+
+    <section class="slide">
+        <img class="cover h" src="pictures/sa-character-img.png" alt="" style="height: 90%;">
+    </section>
+
+    <section class="slide">
+        <img class="cover w" src="pictures/gitlab.png" alt="">
+    </section>
+
+    <section class="slide">
         <img class="cover h" src="pictures/Geek-T-Shirt.jpg_q50.webp" alt="">
     </section>
 
     <section class="slide">
-        <h2 class="shout">Устанавливаем<br>БД</h2>
+        <img src="pictures/horizontal-logo-monochromatic-white.png" alt="" style="width: 600px; margin: 0 auto; display: block;">
+
+        <h2 class="shout" style="font-size: 3.1em; margin-top: 80px;">KEEP CALM<br>IT WORKS<br>ON ALL MACHINES</h2>
     </section>
 
     <section class="slide">
-        <h2>😫 Без Docker</h2>
-
-        <pre>
-            <code class="next">$ sudo apt update</code>
-            <code class="next">$ sudo apt install mysql-server</code>
-            <code class="next">$ sudo mysql_secure_installation</code>
-            <code class="next">$ sudo mysql</code>
-            <code class="next">...</code>
-        </pre>
-    </section>
-
-    <section class="slide">
-        <h2>👍 С Docker</h2>
-
-        <pre>
-            <code class="next">$ docker run </code>
-            <code class="next">  --name some-mysql</code>
-            <code class="next">  --env MYSQL_ROOT_PASSWORD=my-secret-pw</code>
-            <code class="next">  --detach</code>
-            <code class="next">  mysql:8</code>
-            <code class="next"> </code>
-            <code class="next">86f3fabdfb64e70e09ffe9d0b7dfce7827e40...</code>
-        </pre>
-    </section>
-
-    <section class="slide">
-        <h2 class="shout">Запускаем Lighthouse</h2>
-    </section>
-
-    <section class="slide">
-        <h2>😫 Без Docker</h2>
-
-        <pre>
-            <code class="next">Установить Google Chrome for Desktop.</code>
-            <code class="next">Установить текущую LTS версию Node.</code>
-            <code class="next">$ npm install -g lighthouse</code>
-            <code class="next">$ lighthouse http://frontendconf.ru</code>
-        </pre>
-    </section>
-
-    <section class="slide">
-        <h2>👍 С Docker</h2>
-
-        <pre>
-            <code class="next">$ docker run </code>
-            <code class="next">  --rm</code>
-            <code class="next">  --name lighthouse</code>
-            <code class="next">  -it</code>
-            <code class="next">  --volume ~:/home/chrome/reports</code>
-            <code class="next">  --cap-add=SYS_ADMIN</code>
-            <code class="next">  femtopixel/google-lighthouse http://frontendconf.ru</code>
-        </pre>
-    </section>
-
-    <section class="slide clear">
-        <asciinema-player
-            preload
-            font-size="big"
-            src="asciinema/lighthouse.cast"
-            cols="90"
-            rows="14"
-        ></asciinema-player>
+        <h2 class="shout">Пишите код для продакшена</h2>
     </section>
 
     <section class="slide clear">
@@ -274,9 +261,36 @@
         </ul>
     </section>
 
+    <section class="slide">
+        <h2>Hello World</h2>
+
+        <pre>
+            <code>$ docker run ubuntu:14.04 /bin/echo 'Hello world'</code>
+            <code> </code>
+            <code>Hello world</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h2>Hello World (2)</h2>
+
+        <pre>
+            <code>$ <mark>docker run hello-world</mark></code>
+            <code></code>
+            <code>Unable to find image 'hello-world:latest' locally</code>
+            <code>latest: Pulling from library/hello-world</code>
+            <code>...</code>
+            <code>Hello from Docker!</code>
+            <code>This message shows that your installation appears...</code>
+            <code>...</code>
+        </pre>
+    </section>
+
     <section class="slide clear">
         <img class="cover" src="pictures/kitematic.png" alt="">
     </section>
+
+    <!-- похоже на наши инструменты -->
 
     <section class="slide clear" style="background-color: #50c6c8;">
         <img class="cover h" src="pictures/beginner.jpg" alt="">
@@ -325,7 +339,7 @@
     </section>
 
     <section class="slide">
-        <h2 class="shout">Немного рецептов</h2>
+        <h2 class="shout">Немного<br>рецептов</h2>
     </section>
 
     <section class="slide">
@@ -423,6 +437,45 @@
     </section>
 
     <section class="slide">
+        <h2 class="shout">Запускаем Lighthouse</h2>
+    </section>
+
+    <section class="slide">
+        <h2>😫 Без Docker</h2>
+
+        <pre>
+            <code class="next">Установить Google Chrome for Desktop.</code>
+            <code class="next">Установить текущую LTS версию Node.</code>
+            <code class="next">$ npm install -g lighthouse</code>
+            <code class="next">$ lighthouse http://frontendconf.ru</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h2>👍 С Docker</h2>
+
+        <pre>
+            <code class="next">$ docker run </code>
+            <code class="next">  --rm</code>
+            <code class="next">  --name lighthouse</code>
+            <code class="next">  -it</code>
+            <code class="next">  --volume ~:/home/chrome/reports</code>
+            <code class="next">  --cap-add=SYS_ADMIN</code>
+            <code class="next">  femtopixel/google-lighthouse http://frontendconf.ru</code>
+        </pre>
+    </section>
+
+    <section class="slide clear">
+        <asciinema-player
+            preload
+            font-size="big"
+            src="asciinema/lighthouse.cast"
+            cols="90"
+            rows="14"
+        ></asciinema-player>
+    </section>
+
+    <section class="slide">
         <h2 class="shout">Нагрузка</h2>
     </section>
 
@@ -438,10 +491,6 @@
 
     <section class="slide">
         <h2 class="shout">Решение организационных вопросов</h2>
-    </section>
-
-    <section class="slide">
-        <h2 class="shout">Закон Конвея</h2>
     </section>
 
     <section class="slide">
@@ -463,56 +512,6 @@
             <code>     - ./data/nginx:/etc/nginx/conf.d</code>
             <code>    ports:</code>
             <code>    - 80:80</code>
-        </pre>
-    </section>
-
-    <section class="slide">
-        <h2>🖼 Некоторые образы (1)</h2>
-
-        <ul>
-            <li class="next">wordpress</li>
-            <li class="next">mysql</li>
-            <li class="next">ubuntu</li>
-            <li class="next">node</li>
-            <li class="next">nginx</li>
-        </ul>
-    </section>
-
-    <section class="slide">
-        <h2>🖼 Некоторые образы (2)</h2>
-
-        <ul>
-            <li class="next">sentry</li>
-            <li class="next">sonarqube</li>
-            <li class="next">hello-world</li>
-            <li class="next">docker</li>
-            <li class="next">kitematic/minecraft</li>
-            <li class="next">ваш собственный образ</li>
-        </ul>
-    </section>
-
-    <section class="slide">
-        <h2>Hello World</h2>
-
-        <pre>
-            <code>$ docker run ubuntu:14.04 /bin/echo 'Hello world'</code>
-            <code> </code>
-            <code>Hello world</code>
-        </pre>
-    </section>
-
-    <section class="slide">
-        <h2>Hello World (2)</h2>
-
-        <pre>
-            <code>$ <mark>docker run hello-world</mark></code>
-            <code></code>
-            <code>Unable to find image 'hello-world:latest' locally</code>
-            <code>latest: Pulling from library/hello-world</code>
-            <code>...</code>
-            <code>Hello from Docker!</code>
-            <code>This message shows that your installation appears...</code>
-            <code>...</code>
         </pre>
     </section>
 
@@ -587,10 +586,6 @@
 
     <section class="slide clear" style="background-color: #ebedef;">
         <img class="cover h" src="pictures/wordpress-files.png" alt="" style="height: 90%;">
-    </section>
-
-    <section class="slide">
-        <h2 class="shout">Пишите код для продакшена</h2>
     </section>
 
     <!-- конкретно наш случай, как мы работаем с докером -->
