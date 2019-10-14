@@ -5,7 +5,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="node_modules/@shower/ribbon/styles/styles.css">
-    <link rel="stylesheet" type="text/css" href="/asciinema-player.css" />
     <style>
         .shower {
             --slide-ratio: calc(16 / 9);
@@ -29,10 +28,6 @@
             right: auto;
             color: initial;
             background: none;
-        }
-
-        .asciinema-terminal .line span {
-            height: auto;
         }
     </style>
 </head>
@@ -115,6 +110,19 @@
         <img class="cover h" src="pictures/iamdone.png" alt="">
     </section>
 
+    <section class="slide">
+        <h2>😫 Без Docker</h2>
+
+        <pre>
+            <code class="next">$ brew update</code>
+            <code class="next">$ brew install mysql</code>
+            <code class="next">...</code>
+            <code class="next">$ \curl -sSL https://get.rvm.io | bash</code>
+            <code class="next">...</code>
+            <code class="next">$ rails s</code>
+        </pre>
+    </section>
+
     <section class="slide clear">
         <img class="cover h" src="pictures/life-stack.png" alt="" style="height: 80%;">
     </section>
@@ -143,24 +151,14 @@
         <img class="cover w" src="pictures/compose.png" alt="" style="width: 90%;">
     </section>
 
-    <section class="slide clear">
-        <asciinema-player
-            preload
-            font-size="big"
-            src="asciinema/cashbox-api.cast"
-            cols="90"
-            rows="14"
-        ></asciinema-player>
-    </section>
-
     <section class="slide">
-        <h2 class="shout">Автоматизируй всё</h2>
+        <h2 class="shout">Автоматизируй</h2>
     </section>
 
     <!-- 2. оставляем рабочий компьютер чистым -->
 
     <section class="slide">
-        <h2 class="shout">Устойчивость</h2>
+        <h2 class="shout">Устойчивость ⚖</h2>
     </section>
 
     <section class="slide clear">
@@ -177,16 +175,37 @@
         <pre>
             <code>$ docker rm --volumes api</code>
         </pre>
+
+        <pre class="next">
+            <code>$ docker system prune --all</code>
+        </pre>
     </section>
 
-    <!-- 3.  -->
+    <!-- 3. пишем код для продакшена -->
 
     <section class="slide">
-        <h2 class="shout">Учимся деплоить</h2>
+        <h2 class="shout">Контролируем эксплуатацию</h2>
     </section>
 
     <section class="slide">
         <img class="cover h" src="pictures/sa-character-img.png" alt="" style="height: 90%;">
+    </section>
+
+    <section class="slide">
+        <h2>😫 Без Docker</h2>
+
+        <ol>
+            <li class="next"><mark>nvm use 10</mark></li>
+            <li class="next"><mark>npm install</mark></li>
+            <li class="next"><mark>npm run build</mark></li>
+            <li class="next">Раздаём папку <mark>/dist</mark> веб-сервером</li>
+        </ol>
+    </section>
+
+    <section class="slide">
+        <h2>👍 С Docker</h2>
+
+        <h2 class="shout">Упаковано в Docker 📦</h2>
     </section>
 
     <section class="slide">
@@ -200,11 +219,11 @@
     <section class="slide">
         <img src="pictures/horizontal-logo-monochromatic-white.png" alt="" style="width: 600px; margin: 0 auto; display: block;">
 
-        <h2 class="shout" style="font-size: 3.1em; margin-top: 80px;">KEEP CALM<br>IT WORKS<br>ON ALL MACHINES</h2>
+        <h2 class="shout" style="font-size: 3.1em; margin-top: 80px;">KEEP CALM<br> IT WORKS<br> ON ALL MACHINES</h2>
     </section>
 
     <section class="slide">
-        <h2 class="shout">Пишите код для продакшена</h2>
+        <h2 class="shout">Пишите код для продакшна</h2>
     </section>
 
     <section class="slide clear">
@@ -234,7 +253,7 @@
     </section>
 
     <section class="slide">
-        <h2 class="shout">Установка Docker</h2>
+        <h2 class="shout">Установка<br> Docker ⏬</h2>
     </section>
 
     <section class="slide clear" style="background-color: #061f2f;">
@@ -268,7 +287,7 @@
     <!-- похоже на наши инструменты -->
 
     <section class="slide">
-        <h2 class="shout">Docker — это не только для<br>админов</h2>
+        <h2 class="shout">Docker — это не только для<br> админов</h2>
     </section>
 
     <section class="slide">
@@ -284,7 +303,7 @@
     </section>
 
     <section class="slide">
-        <h2 class="shout">Docker как NPM,<br>но для Ops</h2>
+        <h2 class="shout">Docker как NPM,<br> но для Ops</h2>
     </section>
 
     <section class="slide">
@@ -355,7 +374,7 @@
     </section>
 
     <section class="slide">
-        <h2 class="shout">Немного<br>рецептов</h2>
+        <h2 class="shout">Немного<br> рецептов</h2>
     </section>
 
     <section class="slide">
@@ -407,16 +426,6 @@
         </pre>
     </section>
 
-    <section class="slide clear">
-        <asciinema-player
-            preload
-            font-size="big"
-            src="asciinema/lighthouse.cast"
-            cols="90"
-            rows="14"
-        ></asciinema-player>
-    </section>
-
     <section class="slide">
         <h2 class="shout">Нагрузка</h2>
     </section>
@@ -425,9 +434,9 @@
         <h2>👍 С Docker</h2>
 
         <pre>
-            <code>$ docker service scale frontend=50</code>
+            <code>$ docker service scale frontend=10</code>
             <code> </code>
-            <code>frontend scaled to 50</code>
+            <code>frontend scaled to 10</code>
         </pre>
     </section>
 
@@ -444,7 +453,21 @@
     </section>
 
     <section class="slide">
-        <h2 class="shout">Выбираем<br>технологию</h2>
+        <h2>docker inspect</h2>
+
+        <pre>
+            <code>$ docker inspect NAME|ID</code>
+        </pre>
+
+        <pre class="next">
+            <code>"Labels": {</code>
+            <code>  "maintainer": "aad.jerry@gmail.com"</code>
+            <code>}</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">Выбираем<br> технологию</h2>
     </section>
 
     <section class="slide clear">
@@ -488,9 +511,13 @@
         <h2>Запускаем контейнер</h2>
 
         <pre>
-            <code>docker build <mark>-tag my-app</mark> .</code>
-            <code class="next">docker run -p 5000:5000 <mark>-tag my-app</mark></code>
+            <code>docker build <mark>--tag my-app</mark> .</code>
+            <code class="next">docker run -p 5000:5000 <mark>--tag my-app</mark></code>
         </pre>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">Демо</h2>
     </section>
 
     <section class="slide clear">
@@ -534,109 +561,53 @@
     </section>
 
     <section class="slide">
+        <h2 class="shout">Демо</h2>
+    </section>
+
+    <section class="slide">
         <h2 class="shout">Универсальная абстракция</h2>
     </section>
-
-<!--     <section class="slide">
-        <h2 class="shout">Wordpress за&nbsp;5&nbsp;минут</h2>
-    </section>
-
-    <section class="slide">
-        <img class="cover w" src="pictures/dockerhub-wordpress.png" alt="" style="box-shadow: 5px 5px 20px 8px #b9b9b9; width: 90%;">
-    </section>
-
-    <section class="slide">
-        <h2>docker-compose.yml (1)</h2>
-
-        <pre>
-            <code>version: '3.1'</code>
-            <code>services:</code>
-            <code>  <mark>db</mark>:</code>
-            <code>    image: mysql:5.7</code>
-            <code>  <mark>wordpress</mark>:</code>
-            <code>    image: wordpress</code>
-        </pre>
-    </section>
-
-    <section class="slide">
-        <h2>docker-compose.yml (2)</h2>
-
-        <pre style="font-size: 0.65em;">
-            <code><mark>db:</mark></code>
-            <code>  image: mysql:5.7</code>
-            <code>  environment:</code>
-            <code>    MYSQL_DATABASE: exampledb</code>
-            <code>    MYSQL_USER: exampleuser</code>
-            <code>    MYSQL_PASSWORD: examplepass</code>
-            <code>    MYSQL_RANDOM_ROOT_PASSWORD: '1'</code>
-            <code>  volumes:</code>
-            <code>    - ./db:/var/lib/mysql</code>
-        </pre>
-    </section>
-
-    <section class="slide">
-        <h2>docker-compose.yml (3)</h2>
-
-        <pre style="font-size: 0.65em;">
-            <code><mark>wordpress:</mark></code>
-            <code>  image: wordpress</code>
-            <code>  ports:</code>
-            <code>    - 8080:80</code>
-            <code>  environment:</code>
-            <code>    WORDPRESS_DB_HOST: db</code>
-            <code>    WORDPRESS_DB_USER: exampleuser</code>
-            <code>    WORDPRESS_DB_PASSWORD: examplepass</code>
-            <code>    WORDPRESS_DB_NAME: exampledb</code>
-            <code>  volumes:</code>
-            <code>    - ./wp-content:/var/www/html/wp-content</code>
-        </pre>
-    </section>
-
-    <section class="slide clear">
-        <asciinema-player
-            preload
-            font-size="big"
-            src="asciinema/272875.cast"
-            cols="90"
-            rows="14"
-        ></asciinema-player>
-    </section>
-
-    <section class="slide clear">
-        <img class="cover w" src="pictures/wordpress-1.png" alt="" style="width: 90%;">
-    </section>
-
-    <section class="slide clear" style="background-color: #ebedef;">
-        <img class="cover h" src="pictures/wordpress-files.png" alt="" style="height: 90%;">
-    </section>
- -->
 
     <section class="slide">
         <h2 class="shout">Компонуемость</h2>
     </section>
 
     <section class="slide">
-        <h2>👍 С Docker</h2>
+        <h2>👍 С Docker (docker-compose.yml)</h2>
 
         <pre style="font-size: 0.65em;">
             <code>services:</code>
-            <code>  <mark>cashbox-api</mark>:</code>
+            <code>  <mark>api</mark>:</code>
             <code>    build: ./api</code>
-            <code>  <mark>cashbox-admin-front</mark>:</code>
-            <code>    build: ./admin-front</code>
-            <code>  <mark>nginx</mark>:</code>
-            <code>    image: nginx:1-alpine</code>
-            <code>    volumes:</code>
-            <code>     - ./data/nginx:/etc/nginx/conf.d</code>
+            <code>  <mark>front</mark>:</code>
+            <code>    build: ./front</code>
+            <code>  <mark>reverse-proxy</mark>:</code>
+            <code>    image: abiosoft/caddy</code>
             <code>    ports:</code>
-            <code>    - 80:80</code>
+            <code>      - 80:80</code>
+            <code>    volumes:</code>
+            <code>      - ./Caddyfile:/etc/Caddyfile</code>
         </pre>
     </section>
 
-    <!-- конкретно наш случай, как мы работаем с докером -->
+    <section class="slide">
+        <h2>Запускаем связку контейнеров</h2>
+
+        <pre>
+            <code>$ docker-compose up</code>
+        </pre>
+    </section>
 
     <section class="slide">
-        <h2>👏 Спасибо! Вопросы?</h2>
+        <h2 class="shout">Демо</h2>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">Виртуализируй</h2>
+    </section>
+
+    <section class="slide">
+        <h2>👏 Спасибо!</h2>
 
         <ul>
             <li>👨 Алексей Авдеев</li>
@@ -655,7 +626,5 @@
 
     <script src="node_modules/shower-core/shower.min.js"></script>
     <!-- Copyright © 3000 Yours Truly, Famous Inc. -->
-
-    <script src="/asciinema-player.js"></script>
 </body>
 </html>
