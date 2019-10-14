@@ -1,210 +1,630 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Shower Presentation Engine</title>
+    <title>Docker для фронтендера</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="shower/themes/ribbon/styles/styles.css">
     <style>
         .shower {
             --slide-ratio: calc(16 / 9);
+            --ribbon-size: 40px;
+        }
+        .progress::before {
+            background-color: #fa1100;
+        }
+        .slide {
+            padding-top: 51px;
+            background: #fff url(pictures/fcconf_bg.png) no-repeat;
+            background-size: cover;
+        }
+        .slide.clear {
+            background-image: none;
+        }
+        .slide::after {
+            top: auto;
+            bottom: 0;
+            left: 40px;
+            right: auto;
+            color: initial;
+            background: none;
         }
     </style>
 </head>
 <body class="shower list">
 
     <header class="caption">
-        <h1>Shower Presentation Engine</h1>
-        <p>Yours Truly, Famous Inc.</p>
+        <h1>Docker для фронтендера</h1>
+        <p><a href="https://alexey-avdeev.com/">Алексей Авдеев</a>, <a href="https://neuron.digital/">Neuron.Digital</a></p>
     </header>
 
-    <section class="slide" id="cover">
-        <h2>Shower Presentation Engine</h2>
-        <p>Brought to you by <a href="http://pepelsbey.net">Vadim Makeev</a></p>
+    <section class="slide clear" id="cover">
+        <h2>Docker для фронтендера</h2>
+        <p><a href="https://alexey-avdeev.com/">Алексей Авдеев</a>, <a href="https://neuron.digital/">Neuron.Digital</a></p>
         <figure>
-            <img class="cover" src="pictures/cover.jpg" alt="Hands on the orange typewriter in a park">
-            <figcaption class="copyright right white">
-                <a href="http://fiftyfootshadows.net/">© John Carey</a>
-            </figcaption>
+            <img class="cover h" src="pictures/fcconf_title.png" alt="FrontendConf Background">
         </figure>
         <style>
             #cover h2 {
-                margin: 30px 0 0;
-                color: white;
-                text-align: center;
-                font-size: 70px;
+                margin: 0;
+                color: #000;
+                font-size:60px;
             }
-
             #cover p {
                 margin: 10px 0 0;
-                text-align: center;
-                color: white;
-                font-style: italic;
-                font-size: 20px;
+                color: #000;
+                font-size: 30px;
             }
-
             #cover p a {
-                color: white;
+                color: #000;
             }
         </style>
     </section>
 
+    <!-- докер приходит во фронтенд -->
+
     <section class="slide">
-        <h2>Shower key features</h2>
+        <img class="cover w" src="pictures/trends.png" alt="" style="box-shadow: 5px 5px 20px 8px #b9b9b9; width: 80%;">
+    </section>
+
+    <section class="slide clear">
+        <img class="cover w" src="pictures/docker-boat.jpg" alt="">
+    </section>
+
+    <section class="slide">
+        <img class="cover w" src="pictures/intro.png" alt="" style="width: 90%;">
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">Требования: Docker</h2>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">Эра Docker</h2>
+    </section>
+
+    <section class="slide">
+        <h2>👨‍💻 О себе</h2>
+
         <ol>
-            <li>Built on HTML, CSS and JavaScript</li>
-            <li>Works in all modern browsers</li>
-            <li>Themes are separated from engine</li>
-            <li>Fully keyboard accessible</li>
-            <li>Printable to PDF</li>
-        </ol>
-        <p class="note">Shower ['ʃəuə] noun. A person or thing that shows.</p>
-    </section>
-
-    <section class="slide">
-        <h2>Plain text on your slides</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur <a href="#4">adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <em>quis nostrud</em> exercitation ullamco laboris <strong>nisi ut aliquip</strong> ex ea commodo consequat. Duis aute irure <i>dolor</i> in reprehenderit in voluptate velit esse cillum <b>dolore</b> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in <code>&lt;culpa&gt;</code> qui officia deserunt mollit anim id est laborum.</p>
-    </section>
-
-    <section class="slide">
-        <h2>Two columns if you like</h2>
-        <div class="columns two">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-        </div>
-    </section>
-
-    <section class="slide">
-        <h2>All kind of lists</h2>
-        <ol>
-            <li>Simple lists are marked with bullets</li>
-            <li>Ordered lists begin with a number</li>
-            <li>You can even nest lists one inside another
-                <ul>
-                    <li>Or mix their types</li>
-                    <li>But do not go too far</li>
-                    <li>Otherwise audience will be bored</li>
-                </ul>
-            </li>
-            <li>Look, seven rows exactly!</li>
+            <li>👨 Алексей Авдеев (<a href="https://github.com/avdeev">https://github.com/avdeev</a>)</li>
+            <li class="next">👔 Руковожу командой фронтенд-разработчиков</li>
+            <li class="next">🏙️ Из Нижнего Новгорода, работаю в Москве</li>
+            <li class="next">🌐 <a href="https://neuron.digital/">Neuron.Digital</a></li>
+            <li class="next">👴 Программирую с 2002 года</li>
         </ol>
     </section>
 
+    <!-- зачем фронту докер -->
+    <!-- 1. поднимает локально backend -->
+
     <section class="slide">
-        <h2>Serious citations</h2>
-        <figure>
-            <blockquote>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-            </blockquote>
-            <figcaption>Marcus Tullius Cicero</figcaption>
-        </figure>
+        <h2 class="shout">Зачем?</h2>
     </section>
 
     <section class="slide">
-        <h2>Code samples</h2>
+        <h2 class="shout">Поднимаем backend</h2>
+    </section>
+
+    <section class="slide clear" style="background-color: #ea413c">
+        <img class="cover h" src="pictures/iamdone.png" alt="">
+    </section>
+
+    <section class="slide">
+        <h2>😫 Без Docker</h2>
+
         <pre>
-            <code>&lt;!DOCTYPE html&gt;</code>
-            <code class="mark">&lt;html lang="en"&gt;</code>
-            <code><mark>&lt;head&gt;</mark> <span class="comment">&lt;!--Comment--&gt;</span></code>
-            <code>    &lt;title&gt;Shower&lt;/title&gt;</code>
-            <code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
-            <code>    &lt;link rel="stylesheet" href="screen.css"&gt;</code>
-            <code><mark>&lt;/head&gt;</mark></code>
+            <code class="next">$ brew update</code>
+            <code class="next">$ brew install mysql</code>
+            <code class="next">...</code>
+            <code class="next">$ \curl -sSL https://get.rvm.io | bash</code>
+            <code class="next">...</code>
+            <code class="next">$ rails s</code>
+        </pre>
+    </section>
+
+    <section class="slide clear">
+        <img class="cover h" src="pictures/life-stack.png" alt="" style="height: 80%;">
+    </section>
+
+    <section class="slide clear">
+        <img class="cover w" src="pictures/start-life.png" alt="">
+    </section>
+
+    <section class="slide clear">
+        <img class="cover w" src="pictures/life-services.png" alt="">
+    </section>
+
+    <section class="slide">
+        <h2>👍 С Docker</h2>
+
+        <pre>
+            <code>$ docker-compose up api</code>
+            <code>...</code>
+            <code>Listening localhost:8080</code>
         </pre>
     </section>
 
     <section class="slide">
-        <h2>Even tables</h2>
-        <table>
-        <tr>
-            <th scope="col">Locavore</th>
-            <th>Umami</th>
-            <th>Helvetica</th>
-            <th>Vegan</th>
-        </tr>
-        <tr>
-            <th scope="row">Fingerstache</th>
-            <td>Kale</td>
-            <td>Chips</td>
-            <td>Keytar</td>
-        </tr>
-        <tr>
-            <th scope="row">Sriracha</th>
-            <td>Gluten-free</td>
-            <td>Ennui</td>
-            <td>Keffiyeh</td>
-        </tr>
-        <tr>
-            <th scope="row">Thundercats</th>
-            <td>Jean</td>
-            <td>Shorts</td>
-            <td>Biodiesel</td>
-        </tr>
-        <tr>
-            <th scope="row">Terry</th>
-            <td>Richardson</td>
-            <td>Swag</td>
-            <td>Blog</td>
-        </tr>
-        </table>
-        <p>It’s good to have information organized.</p>
-    </section>
+        <h2>👍 С Docker</h2>
 
-    <section class="slide" id="picture">
-        <h2>Pictures</h2>
-        <figure>
-            <img class="cover" src="pictures/picture.jpg" alt="Orange typewriter on a wooden table close-up">
-            <figcaption class="copyright right white">
-                <a href="http://fiftyfootshadows.net/">© John Carey</a>
-            </figcaption>
-        </figure>
-        <style>
-            #picture h2 {
-                color: white;
-            }
-        </style>
+        <img class="cover w" src="pictures/compose.png" alt="" style="width: 90%;">
     </section>
 
     <section class="slide">
-        <h2 class="shout shrink">You can even shout this way</h2>
+        <h2 class="shout">Автоматизируй</h2>
+    </section>
+
+    <!-- 2. оставляем рабочий компьютер чистым -->
+
+    <section class="slide">
+        <h2 class="shout">Устойчивость ⚖</h2>
+    </section>
+
+    <section class="slide clear">
+        <img class="cover h" style="height: 100%;" src="pictures/winXPwin7_1527919170.jpg" alt="">
+    </section>
+
+    <section class="slide clear">
+        <img class="cover w" src="pictures/garold.jpg" alt="">
     </section>
 
     <section class="slide">
-        <h2>Inner navigation</h2>
+        <h2>👍 С Docker</h2>
+
+        <pre>
+            <code>$ docker rm --volumes api</code>
+        </pre>
+
+        <pre class="next">
+            <code>$ docker system prune --all</code>
+        </pre>
+    </section>
+
+    <!-- 3. пишем код для продакшена -->
+
+    <section class="slide">
+        <h2 class="shout">Контролируем эксплуатацию</h2>
+    </section>
+
+    <section class="slide">
+        <img class="cover h" src="pictures/sa-character-img.png" alt="" style="height: 90%;">
+    </section>
+
+    <section class="slide">
+        <h2>😫 Без Docker</h2>
+
         <ol>
-            <li>Lets you reveal list items one by one</li>
-            <li class="next">To keep some key points</li>
-            <li class="next">In secret from audience</li>
-            <li class="next">But it will work only once</li>
-            <li class="next">Nobody wants to see the same joke twice</li>
+            <li class="next"><mark>nvm use 10</mark></li>
+            <li class="next"><mark>npm install</mark></li>
+            <li class="next"><mark>npm run build</mark></li>
+            <li class="next">Раздаём папку <mark>/dist</mark> веб-сервером</li>
         </ol>
     </section>
 
-    <section class="slide" id="see-more">
-        <h2 class="shout">
-            <img src="pictures/logo.svg" alt="Shower logo">
-            <a href="https://github.com/shower/shower">See more on GitHub</a>
-        </h2>
-        <style>
-            #see-more h2 {
-                font-size: 100px
-            }
+    <section class="slide">
+        <h2>👍 С Docker</h2>
 
-            #see-more img {
-                width: 0.72em;
-                height: 0.72em;
-            }
-        </style>
+        <h2 class="shout">Упаковано в Docker 📦</h2>
+    </section>
+
+    <section class="slide">
+        <img class="cover w" src="pictures/gitlab.png" alt="">
+    </section>
+
+    <section class="slide">
+        <img class="cover h" src="pictures/Geek-T-Shirt.jpg_q50.webp" alt="">
+    </section>
+
+    <section class="slide">
+        <img src="pictures/horizontal-logo-monochromatic-white.png" alt="" style="width: 600px; margin: 0 auto; display: block;">
+
+        <h2 class="shout" style="font-size: 3.1em; margin-top: 80px;">KEEP CALM<br> IT WORKS<br> ON ALL MACHINES</h2>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">Пишите код для продакшна</h2>
+    </section>
+
+    <section class="slide clear">
+        <img class="cover h" src="pictures/what-are-you.jpg" alt="">
+    </section>
+
+    <section class="slide">
+        <img class="cover h" src="pictures/doka.jpg" alt="" style="height: 80%;">
+    </section>
+
+    <section class="slide clear">
+        <img class="cover h" src="pictures/container-on-machine.jpg" alt="">
+    </section>
+
+    <section class="slide">
+        <h2 class="shout" style="font-size: 3.6em;">
+            Безопасно собирайте, делитесь и&nbsp;запускайте любое приложение где угодно
+        </h2>
+    </section>
+
+    <section class="slide clear" style="background-color: #254356;">
+        <img class="cover" src="pictures/VM@2x.png" alt="">
+    </section>
+
+    <section class="slide clear" style="background-color: #254356;">
+        <img class="cover" src="pictures/Container@2x.png" alt="">
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">Установка<br> Docker ⏬</h2>
+    </section>
+
+    <section class="slide clear" style="background-color: #061f2f;">
+        <img class="cover w" src="pictures/requirements.png" alt="">
+    </section>
+
+    <section class="slide clear">
+        <img class="cover w" src="pictures/docker-app-drag.png" alt="">
+    </section>
+
+    <section class="slide">
+        <h2>♻ Установка Docker через Homebrew</h2>
+
+        <pre>
+            <code>$ brew cask install <mark>docker</mark></code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h2>Что входит в Docker Desktop</h2>
+
+        <ul>
+            <li class="next">Docker Engine</li>
+            <li class="next">Docker CLI client</li>
+            <li class="next">Docker Compose</li>
+            <li class="next">Docker Machine</li>
+            <li class="next">Kitematic</li>
+        </ul>
+    </section>
+
+    <!-- похоже на наши инструменты -->
+
+    <section class="slide">
+        <h2 class="shout">Docker — это не только для<br> админов</h2>
+    </section>
+
+    <section class="slide">
+        <h2>Что-то для админов</h2>
+
+        <ul style="font-size: 1.3em;">
+            <li class="next">docker run</li>
+            <li class="next">docker build</li>
+            <li class="next">Dockerfile</li>
+            <li class="next">Image</li>
+            <li class="next">DockerHub</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">Docker как NPM,<br> но для Ops</h2>
+    </section>
+
+    <section class="slide">
+        <h2>Знакомые понятия</h2>
+
+        <ul style="font-size: 1.3em;">
+            <li class="next">docker run <b class="next">🔀 npm start</b></li>
+            <li class="next">docker build <b class="next">🔀 npm run build</b></li>
+            <li class="next">Dockerfile <b class="next">🔀 package.json</b></li>
+            <li class="next">Image <b class="next">🔀 Package</b></li>
+            <li class="next">DockerHub <b class="next">🔀 NPM Registry</b></li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Знакомые понятия</h2>
+
+        <ul style="font-size: 1.3em;">
+            <li class="next">Проект начат как проприетарная разработка</li>
+            <li class="next">Используется для всего подряд</li>
+            <li class="next">Есть альтернативы, призванные заменить</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <img class="cover" src="pictures/dockerhub.png" alt="">
+    </section>
+
+    <section class="slide">
+        <img class="cover w" src="pictures/dockerhub-registry.png" alt="" style="box-shadow: 5px 5px 20px 8px #b9b9b9; width: 90%;">
+    </section>
+
+    <section class="slide">
+        <img class="cover w" src="pictures/dockerhub-ubuntu.png" alt="" style="box-shadow: 5px 5px 20px 8px #b9b9b9; width: 90%;">
+    </section>
+
+    <section class="slide">
+        <h2>Hello World (1)</h2>
+
+        <pre>
+            <code>$ docker run ubuntu:14.04 /bin/echo 'Hello world'</code>
+            <code> </code>
+            <code>Hello world</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <img class="cover w" src="pictures/dockerhub-hello-world.png" alt="" style="box-shadow: 5px 5px 20px 8px #b9b9b9; width: 90%;">
+    </section>
+
+    <section class="slide">
+        <h2>Hello World (2)</h2>
+
+        <pre>
+            <code>$ <mark>docker run hello-world</mark></code>
+            <code></code>
+            <code>Unable to find image 'hello-world:latest' locally</code>
+            <code>latest: Pulling from library/hello-world</code>
+            <code>...</code>
+            <code>Hello from Docker!</code>
+            <code>This message shows that your installation appears...</code>
+            <code>...</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <img class="cover" src="pictures/kitematic.png" alt="">
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">Немного<br> рецептов</h2>
+    </section>
+
+    <section class="slide">
+        <img class="cover w" src="pictures/dockerhub-sentry.png" alt="" style="box-shadow: 5px 5px 20px 8px #b9b9b9; width: 90%;">
+    </section>
+
+    <section class="slide">
+        <img class="cover w" src="pictures/dockerhub-sonarqube.png" alt="" style="box-shadow: 5px 5px 20px 8px #b9b9b9; width: 90%;">
+    </section>
+
+    <section class="slide">
+        <img class="cover w" src="pictures/dockerhub-minecraft.png" alt="" style="box-shadow: 5px 5px 20px 8px #b9b9b9; width: 90%;">
+    </section>
+
+    <section class="slide">
+        <img class="cover w" src="pictures/dockerhub-docker.png" alt="" style="box-shadow: 5px 5px 20px 8px #b9b9b9; width: 90%;">
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">Запускаем Lighthouse</h2>
+    </section>
+
+    <section class="slide">
+        <h2>😫 Без Docker</h2>
+
+        <pre>
+            <code class="next">Установить Google Chrome for Desktop.</code>
+            <code class="next">Установить текущую LTS-версию Node.</code>
+            <code class="next">$ npm install -g lighthouse</code>
+            <code class="next">$ lighthouse http://frontendconf.ru</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <img class="cover w" src="pictures/dockerhub-google-lighthouse.png" alt="" style="box-shadow: 5px 5px 20px 8px #b9b9b9; width: 90%;">
+    </section>
+
+    <section class="slide">
+        <h2>👍 С Docker</h2>
+
+        <pre>
+            <code>$ docker run \</code>
+            <code>  --rm \</code>
+            <code>  --name lighthouse \</code>
+            <code>  -it \</code>
+            <code>  --volume ~:/home/chrome/reports \</code>
+            <code>  --cap-add=SYS_ADMIN \</code>
+            <code>  <mark>femtopixel/google-lighthouse http://frontendconf.ru</mark></code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">Нагрузка</h2>
+    </section>
+
+    <section class="slide">
+        <h2>👍 С Docker</h2>
+
+        <pre>
+            <code>$ docker service scale frontend=10</code>
+            <code> </code>
+            <code>frontend scaled to 10</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">Решение организационных вопросов</h2>
+    </section>
+
+    <section class="slide">
+        <h2>Dockerfile</h2>
+
+        <pre>
+            <code>LABEL maintainer="aad.jerry@gmail.com"</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h2>docker inspect</h2>
+
+        <pre>
+            <code>$ docker inspect NAME|ID</code>
+        </pre>
+
+        <pre class="next">
+            <code>"Labels": {</code>
+            <code>  "maintainer": "aad.jerry@gmail.com"</code>
+            <code>}</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">Выбираем<br> технологию</h2>
+    </section>
+
+    <section class="slide clear">
+        <img class="cover w" src="pictures/frameworks.png" alt="">
+    </section>
+
+    <section class="slide">
+        <img class="cover w" src="pictures/dockerhub-node.png" alt="" style="box-shadow: 5px 5px 20px 8px #b9b9b9; width: 90%;">
+    </section>
+
+    <section class="slide">
+        <h2>Dockerfile (1)</h2>
+
+        <pre>
+            <code>FROM    node:10-alpine as builder</code>
+            <code class="next">WORKDIR /app</code>
+            <code class="next">COPY    package*.json ./</code>
+            <code class="next">RUN     npm ci</code>
+            <code class="next">COPY    vue.config.js babel.config.js ./</code>
+            <code class="next">COPY    src src</code>
+            <code class="next"><mark>RUN     npm run build</mark></code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <img class="cover w" src="pictures/dockerhub-nginx.png" alt="" style="box-shadow: 5px 5px 20px 8px #b9b9b9; width: 90%;">
+    </section>
+
+    <section class="slide">
+        <h2>Dockerfile (2)</h2>
+
+        <pre>
+            <code>FROM   nginx:1.13-alpine</code>
+            <code class="next">COPY   nginx /etc/nginx/conf.d</code>
+            <code class="next">COPY   --from=builder /app/dist/ /usr/share/nginx/html/</code>
+            <code class="next"><mark>EXPOSE 5000</mark></code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h2>Запускаем контейнер</h2>
+
+        <pre>
+            <code>docker build <mark>--tag my-app</mark> .</code>
+            <code class="next">docker run -p 5000:5000 <mark>--tag my-app</mark></code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">Демо</h2>
+    </section>
+
+    <section class="slide clear">
+        <img class="cover h" style="height: 90%;" src="pictures/backend-frameworks.png" alt="">
+    </section>
+
+    <section class="slide">
+        <img class="cover w" src="pictures/dockerhub-node.png" alt="" style="box-shadow: 5px 5px 20px 8px #b9b9b9; width: 90%;">
+    </section>
+
+    <section class="slide">
+        <h2>Dockerfile для Node.js</h2>
+
+        <pre>
+            <code>FROM node:10-alpine</code>
+            <code class="next">WORKDIR /app</code>
+            <code class="next">COPY package*.json ./</code>
+            <code class="next">RUN npm ci</code>
+            <code class="next">COPY . .</code>
+            <code class="next"><mark>EXPOSE 5000</mark></code>
+            <code class="next">CMD ["node", "server.js"]</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <img class="cover w" src="pictures/dockerhub-python.png" alt="" style="box-shadow: 5px 5px 20px 8px #b9b9b9; width: 90%;">
+    </section>
+
+    <section class="slide">
+        <h2>Dockerfile для Python</h2>
+
+        <pre>
+            <code>FROM python:3-alpine</code>
+            <code class="next">WORKDIR /usr/src/app</code>
+            <code class="next">COPY requirements.txt ./</code>
+            <code class="next">RUN pip install --no-cache-dir -r requirements.txt</code>
+            <code class="next">COPY . .</code>
+            <code class="next"><mark>EXPOSE 5000</mark></code>
+            <code class="next">CMD ["python", "./your-daemon-or-script.py"]</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">Демо</h2>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">Универсальная абстракция</h2>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">Компонуемость</h2>
+    </section>
+
+    <section class="slide">
+        <h2>👍 С Docker (docker-compose.yml)</h2>
+
+        <pre style="font-size: 0.65em;">
+            <code>services:</code>
+            <code>  <mark>api</mark>:</code>
+            <code>    build: ./api</code>
+            <code>  <mark>front</mark>:</code>
+            <code>    build: ./front</code>
+            <code>  <mark>reverse-proxy</mark>:</code>
+            <code>    image: abiosoft/caddy</code>
+            <code>    ports:</code>
+            <code>      - 80:80</code>
+            <code>    volumes:</code>
+            <code>      - ./Caddyfile:/etc/Caddyfile</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h2>Запускаем связку контейнеров</h2>
+
+        <pre>
+            <code>$ docker-compose up</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">Демо</h2>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">Виртуализируй</h2>
+    </section>
+
+    <section class="slide">
+        <h2>👏 Спасибо!</h2>
+
+        <ul>
+            <li>👨 Алексей Авдеев</li>
+            <li>🌐 <a href="https://github.com/avdeev">https://github.com/avdeev</a></li>
+            <li>🌐 <a href="https://neuron.digital/">Neuron.Digital</a></li>
+        </ul>
+
+        <img src="pictures/iam.jpg" alt="я" style="height: 250px; position: absolute; right: 80px; top: 141px;">
     </section>
 
     <footer class="badge">
-        <a href="https://github.com/shower/shower">Fork me on GitHub</a>
+        <a href="https://github.com/shower/shower">Powered by Shower</a>
     </footer>
 
     <div class="progress"></div>
 
     <script src="shower/shower.min.js"></script>
     <!-- Copyright © 3000 Yours Truly, Famous Inc. -->
-
 </body>
 </html>
