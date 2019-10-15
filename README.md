@@ -2,7 +2,9 @@
 
 Слайды для доклада на конференцию FrontendConf 2019
 
-https://frontendconf.ru/moscow/2019/abstracts/5593
+[Доклад в программе FrontendConf 2019](https://frontendconf.ru/moscow/2019/abstracts/5593)
+
+[Слайды](http://alexey-avdeev.com/docker-for-front-end-developers/)
 
 ## Тезисы
 
